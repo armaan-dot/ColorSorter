@@ -1,0 +1,17 @@
+The robot always starts at position (0, 0).
+The Optical Sensor LED is turned on.
+The robot:
+Moves along a defined path.
+Turns at corners.
+Detects obstacles (using Distance or Bumper Sensor).
+Detects the colour of an object (using Optical Sensor).
+Picks it up (with Arm and pulley).
+Delivers it to a shelf location.
+
+Assumptions (for clarity)
+Let’s assume your robot has:
+Drive Motors: LeftMotor, RightMotor
+Optical Sensor: Optical
+Distance Sensor: DistanceSensor
+Arm Motor: ArmMotor
+Pulley Motor: PulleyMotor
