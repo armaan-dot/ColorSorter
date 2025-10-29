@@ -1,0 +1,17 @@
+// To move forward 
+void MoveForward(int power){
+  MotorLeft.spin(forward, power, percent);
+  MotorRight.spin(forward, power, percent);
+}
+
+//To move backward
+void MoveBackward(int power){
+  MotorLeft.spin(reverse, power, percent);
+  MotorRight.spin(reverse, power, percent);  
+}
+
+//To stop the Robot
+void Brake (){
+  MotorLeft.stop(brake);
+  MotorRight.stop(brake);
+}
