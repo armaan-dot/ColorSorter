@@ -1,1 +1,164 @@
-{"mode":"Text","hardwareTarget":"brain","textContent":"#pragma region VEXcode Generated Robot Configuration\n// Make sure all required headers are included.\n#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <math.h>\n#include <string.h>\n\n\n#include \"vex.h\"\n\nusing namespace vex;\n\n// Brain should be defined by default\nbrain Brain;\n\n\n// START IQ MACROS\n#define waitUntil(condition)                                                   \\\n  do {                                                                         \\\n    wait(5, msec);                                                             \\\n  } while (!(condition))\n\n#define repeat(iterations)                                                     \\\n  for (int iterator = 0; iterator < iterations; iterator++)\n// END IQ MACROS\n\n\n// Robot configuration code.\ninertial BrainInertial = inertial();\nmotor MotorLeft = motor(PORT1, false);\nmotor MotorRight = motor(PORT6, true);\noptical Optical3 = optical(PORT3);\ndistance Distance4 = distance(PORT4);\nbumper Bumper7 = bumper(PORT7);\ntouchled TouchLED9 = touchled(PORT9);\n\n\n// generating and setting random seed\nvoid initializeRandomSeed(){\n  wait(100,msec);\n  double xAxis = BrainInertial.acceleration(xaxis) * 1000;\n  double yAxis = BrainInertial.acceleration(yaxis) * 1000;\n  double zAxis = BrainInertial.acceleration(zaxis) * 1000;\n  // Combine these values into a single integer\n  int seed = int(\n    xAxis + yAxis + zAxis\n  );\n  // Set the seed\n  srand(seed); \n}\n\n// Converts a color to a string\nconst char* convertColorToString(color col) {\n  if (col == colorType::red) return \"red\";\n  else if (col == colorType::green) return \"green\";\n  else if (col == colorType::blue) return \"blue\";\n  else if (col == colorType::white) return \"white\";\n  else if (col == colorType::yellow) return \"yellow\";\n  else if (col == colorType::orange) return \"orange\";\n  else if (col == colorType::purple) return \"purple\";\n  else if (col == colorType::cyan) return \"cyan\";\n  else if (col == colorType::black) return \"black\";\n  else if (col == colorType::transparent) return \"transparent\";\n  else if (col == colorType::red_violet) return \"red_violet\";\n  else if (col == colorType::violet) return \"violet\";\n  else if (col == colorType::blue_violet) return \"blue_violet\";\n  else if (col == colorType::blue_green) return \"blue_green\";\n  else if (col == colorType::yellow_green) return \"yellow_green\";\n  else if (col == colorType::yellow_orange) return \"yellow_orange\";\n  else if (col == colorType::red_orange) return \"red_orange\";\n  else if (col == colorType::none) return \"none\";\n  else return \"unknown\";\n}\n\n\n// Convert colorType to string\nconst char* convertColorToString(colorType col) {\n  if (col == colorType::red) return \"red\";\n  else if (col == colorType::green) return \"green\";\n  else if (col == colorType::blue) return \"blue\";\n  else if (col == colorType::white) return \"white\";\n  else if (col == colorType::yellow) return \"yellow\";\n  else if (col == colorType::orange) return \"orange\";\n  else if (col == colorType::purple) return \"purple\";\n  else if (col == colorType::cyan) return \"cyan\";\n  else if (col == colorType::black) return \"black\";\n  else if (col == colorType::transparent) return \"transparent\";\n  else if (col == colorType::red_violet) return \"red_violet\";\n  else if (col == colorType::violet) return \"violet\";\n  else if (col == colorType::blue_violet) return \"blue_violet\";\n  else if (col == colorType::blue_green) return \"blue_green\";\n  else if (col == colorType::yellow_green) return \"yellow_green\";\n  else if (col == colorType::yellow_orange) return \"yellow_orange\";\n  else if (col == colorType::red_orange) return \"red_orange\";\n  else if (col == colorType::none) return \"none\";\n  else return \"unknown\";\n}\n\n\nvoid vexcodeInit() {\n\n  // Initializing random seed.\n  initializeRandomSeed(); \n}\n\n#pragma endregion VEXcode Generated Robot Configuration\n\n//----------------------------------------------------------------------------\n//                                                                            \n//    Module:       main.cpp                                                  \n//    Author:       {author}                                                  \n//    Created:      {date}                                                    \n//    Description:  IQ project                                                \n//                                                                            \n//----------------------------------------------------------------------------\n\n// Include the IQ Library\n#include \"iq_cpp.h\"\n\n// Allows for easier use of the VEX Library\nusing namespace vex;\n\nvoid configureAllSensors(){\n  BrainInertial.calibrate();\n  wait(2,seconds);\n  BrainInertial.setHeading(0,degrees);\n  BrainInertial.setRotation(0,degrees);\n  MotorLeft.setPosition(0,turns);\n  MotorRight.setPosition(0,turns);\n  Brain.Screen.clearScreen();\n  Brain.Screen.setFont(mono15);\n  Optical3.setLight(ledState::on);\n}\n\n//rotate robot to a certain angle at a given power\nvoid rotateRobot (int angle, int motorPower){\n  BrainInertial.setRotation(0,degrees);\n  wait(50, msec);\n\n  MotorLeft.setVelocity(motorPower,percent);\n  MotorRight.setVelocity(motorPower,percent);\n  //for positive angle, rotates clockwise\n  if (angle>0) {\n    MotorLeft.spin(forward);\n    MotorRight.spin(reverse); \n  }\n  //for negative angle, rotates counterclockwise\n  else {\n    MotorLeft.spin(reverse);\n    MotorRight.spin(forward);\n  }\n  while (abs(BrainInertial.rotation(degrees))<abs(angle)) {\n  }\n  MotorLeft.stop();\n  MotorRight.stop();\n}\n\nint main() {\n  // Initializing Robot Configuration. DO NOT REMOVE!\n  vexcodeInit();\n  // Begin project code\n  \n}\n","textLanguage":"cpp","robotConfig":[{"port":[1],"name":"MotorLeft","customName":true,"deviceType":"Motor","deviceClass":"motor","setting":{"reversed":"false","fwd":"forward","rev":"reverse"},"triportSourcePort":22},{"port":[6],"name":"MotorRight","customName":true,"deviceType":"Motor","deviceClass":"motor","setting":{"reversed":"true","fwd":"forward","rev":"reverse"},"triportSourcePort":22},{"port":[3],"name":"Optical3","customName":false,"deviceType":"Optical","deviceClass":"optical","setting":{},"triportSourcePort":22},{"port":[4],"name":"Distance4","customName":false,"deviceType":"Distance","deviceClass":"distance","setting":{},"triportSourcePort":22},{"port":[7],"name":"Bumper7","customName":false,"deviceType":"Bumper","deviceClass":"bumper","setting":{},"triportSourcePort":22},{"port":[9],"name":"TouchLED9","customName":false,"deviceType":"TouchLED","deviceClass":"touchled","setting":{},"triportSourcePort":22}],"slot":0,"platform":"IQ","sdkVersion":"20230818.11.00.00","appVersion":"4.61.0","fileFormat":"2.0.0","targetBrainGen":"Second","v5SoundsEnabled":false,"aiVisionSettings":{"colors":[],"codes":[],"tags":true,"AIObjects":true,"AIObjectModel":[],"aiModelDropDownValue":""}}
+#pragma region VEXcode Generated Robot Configuration
+// Make sure all required headers are included.
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <math.h>
+#include <string.h>
+
+
+#include "vex.h"
+
+using namespace vex;
+
+// Brain should be defined by default
+brain Brain;
+
+
+// START IQ MACROS
+#define waitUntil(condition)                                                   \
+  do {                                                                         \
+    wait(5, msec);                                                             \
+  } while (!(condition))
+
+#define repeat(iterations)                                                     \
+  for (int iterator = 0; iterator < iterations; iterator++)
+// END IQ MACROS
+
+
+// Robot configuration code.
+inertial BrainInertial = inertial();
+motor MotorLeft = motor(PORT1, false);
+motor MotorRight = motor(PORT6, true);
+optical Optical3 = optical(PORT3);
+distance Distance4 = distance(PORT4);
+bumper Bumper7 = bumper(PORT7);
+touchled TouchLED9 = touchled(PORT9);
+
+
+// generating and setting random seed
+void initializeRandomSeed(){
+  wait(100,msec);
+  double xAxis = BrainInertial.acceleration(xaxis) * 1000;
+  double yAxis = BrainInertial.acceleration(yaxis) * 1000;
+  double zAxis = BrainInertial.acceleration(zaxis) * 1000;
+  // Combine these values into a single integer
+  int seed = int(
+    xAxis + yAxis + zAxis
+  );
+  // Set the seed
+  srand(seed); 
+}
+
+// Converts a color to a string
+const char* convertColorToString(color col) {
+  if (col == colorType::red) return "red";
+  else if (col == colorType::green) return "green";
+  else if (col == colorType::blue) return "blue";
+  else if (col == colorType::white) return "white";
+  else if (col == colorType::yellow) return "yellow";
+  else if (col == colorType::orange) return "orange";
+  else if (col == colorType::purple) return "purple";
+  else if (col == colorType::cyan) return "cyan";
+  else if (col == colorType::black) return "black";
+  else if (col == colorType::transparent) return "transparent";
+  else if (col == colorType::red_violet) return "red_violet";
+  else if (col == colorType::violet) return "violet";
+  else if (col == colorType::blue_violet) return "blue_violet";
+  else if (col == colorType::blue_green) return "blue_green";
+  else if (col == colorType::yellow_green) return "yellow_green";
+  else if (col == colorType::yellow_orange) return "yellow_orange";
+  else if (col == colorType::red_orange) return "red_orange";
+  else if (col == colorType::none) return "none";
+  else return "unknown";
+}
+
+
+// Convert colorType to string
+const char* convertColorToString(colorType col) {
+  if (col == colorType::red) return "red";
+  else if (col == colorType::green) return "green";
+  else if (col == colorType::blue) return "blue";
+  else if (col == colorType::white) return "white";
+  else if (col == colorType::yellow) return "yellow";
+  else if (col == colorType::orange) return "orange";
+  else if (col == colorType::purple) return "purple";
+  else if (col == colorType::cyan) return "cyan";
+  else if (col == colorType::black) return "black";
+  else if (col == colorType::transparent) return "transparent";
+  else if (col == colorType::red_violet) return "red_violet";
+  else if (col == colorType::violet) return "violet";
+  else if (col == colorType::blue_violet) return "blue_violet";
+  else if (col == colorType::blue_green) return "blue_green";
+  else if (col == colorType::yellow_green) return "yellow_green";
+  else if (col == colorType::yellow_orange) return "yellow_orange";
+  else if (col == colorType::red_orange) return "red_orange";
+  else if (col == colorType::none) return "none";
+  else return "unknown";
+}
+
+
+void vexcodeInit() {
+
+  // Initializing random seed.
+  initializeRandomSeed(); 
+}
+
+#pragma endregion VEXcode Generated Robot Configuration
+
+//----------------------------------------------------------------------------
+//                                                                            
+//    Module:       main.cpp                                                  
+//    Author:       {author}                                                  
+//    Created:      {date}                                                    
+//    Description:  IQ project                                                
+//                                                                            
+//----------------------------------------------------------------------------
+
+// Include the IQ Library
+#include "iq_cpp.h"
+
+// Allows for easier use of the VEX Library
+using namespace vex;
+
+void configureAllSensors(){
+  BrainInertial.calibrate();
+  wait(2,seconds);
+  BrainInertial.setHeading(0,degrees);
+  BrainInertial.setRotation(0,degrees);
+  MotorLeft.setPosition(0,turns);
+  MotorRight.setPosition(0,turns);
+  Brain.Screen.clearScreen();
+  Brain.Screen.setFont(mono15);
+  Optical3.setLight(ledState::on);
+}
+
+//rotate robot to a certain angle at a given power
+void rotateRobot (int angle, int motorPower){
+  BrainInertial.setRotation(0,degrees);
+  wait(50, msec);
+
+  MotorLeft.setVelocity(motorPower,percent);
+  MotorRight.setVelocity(motorPower,percent);
+  //for positive angle, rotates clockwise
+  if (angle>0) {
+    MotorLeft.spin(forward);
+    MotorRight.spin(reverse); 
+  }
+  //for negative angle, rotates counterclockwise
+  else {
+    MotorLeft.spin(reverse);
+    MotorRight.spin(forward);
+  }
+  while (abs(BrainInertial.rotation(degrees))<abs(angle)) {
+  }
+  MotorLeft.stop();
+  MotorRight.stop();
+}
+
+int main() {
+  // Initializing Robot Configuration. DO NOT REMOVE!
+  vexcodeInit();
+  // Begin project code
+  
+}
