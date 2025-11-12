@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="28.2.9">
   <diagram name="Page-1" id="2n7V_iQqZQ33SoDnG5gB">
-    <mxGraphModel dx="1905" dy="635" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1861" dy="608" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -106,7 +106,7 @@
         <mxCell id="wMvSJrlsNeDWwdtHmBSH-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wMvSJrlsNeDWwdtHmBSH-73" target="wMvSJrlsNeDWwdtHmBSH-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="wMvSJrlsNeDWwdtHmBSH-73" value="Initialize two doubles called &quot;xPos&quot; and &quot;yPos&quot;, initalizes and defins global bool &quot;turnCheck&quot;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="wMvSJrlsNeDWwdtHmBSH-73" value="Initialize two doubles called &quot;xPos&quot; and &quot;yPos&quot;, initalizes and defines global bool &quot;turnCheck&quot;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="353" y="275" width="145" height="80" as="geometry" />
         </mxCell>
         <mxCell id="wMvSJrlsNeDWwdtHmBSH-74" value="Boolean &quot;turnCheck&quot; will always check if robot needs to turn right or left." style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" vertex="1" collapsed="1" parent="1">
@@ -213,7 +213,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wMvSJrlsNeDWwdtHmBSH-143" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wMvSJrlsNeDWwdtHmBSH-109" target="wMvSJrlsNeDWwdtHmBSH-142">
+        <mxCell id="wMvSJrlsNeDWwdtHmBSH-157" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wMvSJrlsNeDWwdtHmBSH-109" target="wMvSJrlsNeDWwdtHmBSH-156">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="wMvSJrlsNeDWwdtHmBSH-109" value="Call function &quot;releaseObject&quot; and drop object in shelf" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -301,23 +301,13 @@
           <mxGeometry x="638" y="2000" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="wMvSJrlsNeDWwdtHmBSH-142" value="Return to initial starting alignment" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="1740" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="wMvSJrlsNeDWwdtHmBSH-144" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="wMvSJrlsNeDWwdtHmBSH-145">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="520" y="1984.92" as="sourcePoint" />
-          </mxGeometry>
+          <mxGeometry x="320" y="1804.92" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="wMvSJrlsNeDWwdtHmBSH-145" value="Return to initial starting alignment" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="460" y="2007.92" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="wMvSJrlsNeDWwdtHmBSH-146" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="wMvSJrlsNeDWwdtHmBSH-147">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="698" y="2060" as="sourcePoint" />
-          </mxGeometry>
+          <mxGeometry x="460" y="2080" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="wMvSJrlsNeDWwdtHmBSH-147" value="Return to initial starting alignment" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="638" y="2083" width="120" height="60" as="geometry" />
+          <mxGeometry x="638" y="2150" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="wMvSJrlsNeDWwdtHmBSH-148" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="wMvSJrlsNeDWwdtHmBSH-142" target="wMvSJrlsNeDWwdtHmBSH-68">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -359,6 +349,39 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="510" y="1150" as="sourcePoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="wMvSJrlsNeDWwdtHmBSH-158" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wMvSJrlsNeDWwdtHmBSH-156" target="wMvSJrlsNeDWwdtHmBSH-142">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wMvSJrlsNeDWwdtHmBSH-156" value="Lower grabber to lowest position" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="1730" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wMvSJrlsNeDWwdtHmBSH-159" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="wMvSJrlsNeDWwdtHmBSH-161">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="1986" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wMvSJrlsNeDWwdtHmBSH-160" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wMvSJrlsNeDWwdtHmBSH-161" target="wMvSJrlsNeDWwdtHmBSH-145">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="2074" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wMvSJrlsNeDWwdtHmBSH-161" value="Lower grabber to lowest position" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="1999" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wMvSJrlsNeDWwdtHmBSH-162" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="wMvSJrlsNeDWwdtHmBSH-164">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="698" y="2059" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wMvSJrlsNeDWwdtHmBSH-163" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wMvSJrlsNeDWwdtHmBSH-164" target="wMvSJrlsNeDWwdtHmBSH-147">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="698" y="2147" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wMvSJrlsNeDWwdtHmBSH-164" value="Lower grabber to lowest position" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="638" y="2072" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
