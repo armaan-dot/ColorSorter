@@ -1,0 +1,24 @@
+String colorCheck() // Author : Armaandeep Singh 
+{
+  int hue = OpticalSensor.hue();
+    // Get the color det ected 
+   if (hue >= 70 && hue <= 170) //hue values for green
+   {
+      return "Green";
+    } 
+    //hue value: Blue = (190–250)
+    else if (h >= 190 && h <= 250)
+    {
+      return "Blue";
+    }
+    //hue value: Orange = (190–250)
+    else if (h >= 190 && h <= 250)
+    {
+      return "Orange";
+    }
+    // Wrong Color Detected
+    else 
+    {
+      return "UNKNOWN";
+    }
+}
