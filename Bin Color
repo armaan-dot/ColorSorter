@@ -1,0 +1,18 @@
+void colorCheckBin(String ObjectColor)
+{
+  BinColor = OpticalSensor.color();
+if(BinColor == colorCheckBin) {
+  Brain.Screen.print("Color Detected");
+}
+rotateRobot(-90, 50);
+
+if(BinColor == colorCheckBin) {
+  Brain.Screen.print("Color Detected");
+}
+
+rotateRobot(180, 50);
+
+if(BinColor == colorCheckBin) {
+  Brain.Screen.print("Color Detected");
+}
+}
