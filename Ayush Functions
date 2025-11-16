@@ -1,0 +1,36 @@
+void elevObject (int motorpower, int position) 
+{
+  MotorElevator.setPosition(0,turns);
+  MotorElevator.setVelocity(motorpower, percent);
+  MotorElevator.spin(forward);
+  while ( MotorElevator.position(turns)<position){}
+  MotorElevator.stop(hold);
+
+  MotorGrabber.setVelocity(motorpower,percent);
+  MotorGrabber.spin(reverse);
+}
+
+void dropObject (int motorpower){
+  MotorGrabber.setVelocity(motorpower,percent);
+  MotorGrabber.spin(reverse);
+  
+  
+}
+
+
+
+float heightDetect(int motorpower)
+{
+  MotorElevator.setPosition(0,turns);
+  MotorElevator.setVelocity(motorpower, percent);
+  MotorElevator.spin(forward);
+  while(Distance2nd.objectDistance(mm)< 100){}
+  MotorElevator.stop(hold);
+  float distance = MotorElevator.position(turns);
+
+  MotorElevator.spin(reverse);
+  while(MotorElevator.position(turns)>0){}
+  return distance + 1.0;
+
+}
+
