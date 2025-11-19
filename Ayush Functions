@@ -17,8 +17,6 @@ void dropObject (int motorpower){
   
 }
 
-
-
 float heightDetect(int motorpower)
 {
   MotorElevator.setPosition(0,turns);
@@ -33,4 +31,37 @@ float heightDetect(int motorpower)
   return distance + 1.0;
 
 }
+//Sharvesh Code
+void dropping (int motorpower) 
+{
+  MotorElevator.setPosition(0,turns);
+  MotorElevator.setVelocity(motorpower, percent);
+  MotorElevator.spin(forward);
+
+  while ( Distance2nd.objectDistance(mm)< 100 ){}
+
+  MotorElevator.setPosition(0,turns);
+  while( MotorElevator.position(turns) < 0.7){}
+  MotorElevator.stop(hold);
+
+  MotorRight.spin(forward);
+  MotorLeft.spin(forward);
+  wait(1.5,seconds);
+  MotorRight.stop(break);
+  MotorLeft.stop(break);
+
+  MotorGrabber.setVelocity(70,percent);
+  MotorGrabber.spin(reverse);
+  wait(1.5,seconds);
+  MotorGrabber.stop(break);
+  MotorGrabber.stop(stop);
+
+  MotorRight.spin(reverse);
+  MotorLeft.spin(reverse);
+  wait(1.5,seconds);
+  MotorRight.stop(break);
+  MotorLeft.stop(break);
+}
+
+
 
