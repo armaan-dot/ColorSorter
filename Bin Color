@@ -16,3 +16,33 @@ if(BinColor == colorCheckBin) {
   Brain.Screen.print("Color Detected");
 }
 }
+
+//Sharvesh Code
+void colorCheckBin(float ObjectColor)
+{
+
+bool correct = false;
+
+while(correct = false){
+  BinColor = colorCheck();
+if(BinColor == colorCheckBin) {
+  Brain.Screen.print("Color Detected");
+  correct = true;
+}
+rotateRobot(-90, 50);
+
+  BinColor = colorCheck();
+if(BinColor == colorCheckBin) {
+  Brain.Screen.print("Color Detected");
+  correct = true;
+}
+
+rotateRobot(180, 50);
+
+  BinColor = colorCheck();
+if(BinColor == colorCheckBin) {
+  Brain.Screen.print("Color Detected");
+  correct = true;
+}
+}
+}
